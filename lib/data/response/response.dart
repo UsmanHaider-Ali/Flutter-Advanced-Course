@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'responses.g.dart';
+part 'response.g.dart';
 
 @JsonSerializable()
 class BaseResponse {
@@ -34,7 +34,7 @@ class UserResponse {
   @JsonKey(name: 'isProofOfResidencyVerified')
   bool? isProofOfResidencyVerified;
   @JsonKey(name: 'walletBalance')
-  var walletBalance;
+  dynamic walletBalance;
   @JsonKey(name: 'stripeCustomerId')
   String? stripeCustomerId;
 

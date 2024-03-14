@@ -1,13 +1,13 @@
-const String IMAGE_PATH = "assets/images";
+ const String baseImagePath = "assets/images";
 
 class AssetsManager{
-  static const String splashLogo = "$IMAGE_PATH/splash_logo.png";
-  static const String onboardingLogo1 = "$IMAGE_PATH/onboarding_logo1.svg";
-  static const String onboardingLogo2 = "$IMAGE_PATH/onboarding_logo2.svg";
-  static const String onboardingLogo3 = "$IMAGE_PATH/onboarding_logo3.svg";
-  static const String onboardingLogo4 = "$IMAGE_PATH/onboarding_logo4.svg";
-  static const String hollowCircleIc = "$IMAGE_PATH/hollow_cirlce_ic.svg";
-  static const String leftArrowIc = "$IMAGE_PATH/left_arrow_ic.svg";
-  static const String rightarrowIc = "$IMAGE_PATH/right_arrow_ic.svg";
-  static const String solidCircleIc = "$IMAGE_PATH/solid_circle_ic.svg";
+  static const String splashLogo = "$baseImagePath/splash_logo.png";
+  static const String onboardingLogo1 = "$baseImagePath/onboarding_logo1.svg";
+  static const String onboardingLogo2 = "$baseImagePath/onboarding_logo2.svg";
+  static const String onboardingLogo3 = "$baseImagePath/onboarding_logo3.svg";
+  static const String onboardingLogo4 = "$baseImagePath/onboarding_logo4.svg";
+  static const String hollowCircleIc = "$baseImagePath/hollow_cirlce_ic.svg";
+  static const String leftArrowIc = "$baseImagePath/left_arrow_ic.svg";
+  static const String rightarrowIc = "$baseImagePath/right_arrow_ic.svg";
+  static const String solidCircleIc = "$baseImagePath/solid_circle_ic.svg";
 }

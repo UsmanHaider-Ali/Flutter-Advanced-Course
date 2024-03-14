@@ -1,10 +1,4 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
-part of 'responses.dart';
-
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
+part of 'response.dart';
 
 BaseResponse _$BaseResponseFromJson(Map<String, dynamic> json) => BaseResponse()
   ..message = json['message'] as String?

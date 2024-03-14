@@ -14,10 +14,10 @@ class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
 
   @override
-  _OnBoardingViewState createState() => _OnBoardingViewState();
+  OnBoardingViewState createState() => OnBoardingViewState();
 }
 
-class _OnBoardingViewState extends State<OnBoardingView> {
+class OnBoardingViewState extends State<OnBoardingView> {
   final PageController _pageController = PageController(initialPage: 0);
   final OnBoardingViewModel _viewModel = OnBoardingViewModel();
 

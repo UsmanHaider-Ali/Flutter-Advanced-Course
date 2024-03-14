@@ -1,20 +1,45 @@
 import 'package:flutter_advanced_course/app/extensions.dart';
-import 'package:flutter_advanced_course/data/responses/responses.dart';
+import 'package:flutter_advanced_course/data/response/response.dart';
+import 'package:flutter_advanced_course/domain/model.dart';
+
+const String _defaultString = "";
+const bool _defaultBool = false;
 
 extension UserResponseMapper on UserResponse? {
-  UserResponse toDomain() {
-    return UserResponse(this?.id?.isStringNull, this?.name?.isStringNull, this?.email?.isStringNull, this?.phoneNumber?.isStringNull, this?.isNumberVerified?.isBoolNull, this?.isEmailVerified?.isBoolNull, this?.countryOfResidence?.isStringNull, this?.mainReasonForOpeningThisAccount?.isStringNull, this?.proofOfResidence?.toDomain(), this?.profilePicture?.isStringNull, this?.isProofOfResidencyVerified?.isBoolNull, this?.walletBalance, this?.stripeCustomerId?.isStringNull);
+  User toDomain() {
+    return User(
+      this?.id?.isStringNull ?? _defaultString,
+      this?.name!.isStringNull ?? _defaultString,
+      this?.email?.isStringNull ?? _defaultString,
+      this?.phoneNumber?.isStringNull ?? _defaultString,
+      this?.isNumberVerified?.isBoolNull ?? _defaultBool,
+      this?.isEmailVerified?.isBoolNull ?? _defaultBool,
+      this?.countryOfResidence?.isStringNull ?? _defaultString,
+      this?.mainReasonForOpeningThisAccount?.isStringNull ?? _defaultString,
+      this?.proofOfResidence?.toDomain() ?? ProofOfResidence("", "", ""),
+      this?.profilePicture?.isStringNull ?? _defaultString,
+      this?.isProofOfResidencyVerified?.isBoolNull ?? _defaultBool,
+      this?.walletBalance,
+      this?.stripeCustomerId?.isStringNull ?? _defaultString,
+    );
   }
 }
 
 extension ProofOfResidenceResponseMapper on ProofOfResidenceResponse? {
-  ProofOfResidenceResponse toDomain() {
-    return ProofOfResidenceResponse(this?.passport?.isStringNull, this?.drivingLiscence?.isStringNull, this?.idCard?.isStringNull);
+  ProofOfResidence toDomain() {
+    return ProofOfResidence(
+      this?.passport?.isStringNull ?? _defaultString,
+      this?.drivingLiscence?.isStringNull ?? _defaultString,
+      this?.idCard?.isStringNull ?? _defaultString,
+    );
   }
 }
 
 extension LoginResponseMapper on LoginResponse? {
-  LoginResponse toDomain() {
-    return LoginResponse(this?.token?.isStringNull, this?.user?.toDomain());
+  Login toDomain() {
+    return Login(
+      this?.user?.toDomain() ?? User("", "", "", "", false, false, "", "", ProofOfResidence("", "", ""), "", false, 0, ""),
+      this?.token?.isStringNull ?? _defaultString,
+    );
   }
 }

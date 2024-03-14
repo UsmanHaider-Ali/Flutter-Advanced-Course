@@ -1,5 +1,5 @@
 extension NonNullString on String? {
-  String get isStringNull => this ?? '';
+  String get isStringNull => this ?? "";
 }
 
 extension NonNullInteger on int? {
