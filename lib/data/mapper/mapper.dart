@@ -1,6 +1,6 @@
 import 'package:flutter_advanced_course/app/extensions.dart';
 import 'package:flutter_advanced_course/data/response/response.dart';
-import 'package:flutter_advanced_course/domain/model.dart';
+import 'package:flutter_advanced_course/domain/model/model.dart';
 
 const String _defaultString = "";
 const bool _defaultBool = false;
